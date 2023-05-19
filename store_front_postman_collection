@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "de144468-a9de-442b-8d41-6c66f88c504e",
+		"name": "Store API",
+		"description": "API endpoints for the storefront application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"itemId\": \"ITEM-123\",\r\n  \"fullName\": \"John Doe\",\r\n  \"address\": \"123 Main St\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"phoneNumber\": \"123-456-7890\",\r\n  \"creditCardNumber\": \"1234567890123456789\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/order/33cb9430-cfd3-4653-8201-7820b192d62d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"order",
+						"33cb9430-cfd3-4653-8201-7820b192d62d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
